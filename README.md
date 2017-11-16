@@ -1,4 +1,4 @@
-# python_appengine-linebot
+# python_appengine-slackbot
 
 ```
 pip install flask
