@@ -1,7 +1,9 @@
 # coding: utf-8
 
+import os
+
 # botアカウントのトークンを指定
-API_TOKEN = "xoxb-274256074934-N2poPomucOTrhaasRM7mDlDi"
+API_TOKEN = os.environ['API_TOKEN']
 
 # プラグインスクリプトを置いてあるサブディレクトリ名のリスト
 PLUGINS = ['plugins']
