@@ -45,14 +45,14 @@ def default_func(message):
 	query = message.body['text']
 	response = decoder(query)
 	message.reply(response)
-	# profile = line_bot_api.get_profile(event.source.user_id)
-	# store_data(event.timestamp, profile.display_name, query, response)
+	username = message.channel._client.users[message.body['user']][u'name']
+	store_data(int(message.body['ts']), username, query, response)
 
 def store_data(timestamp, user, query, response):
 	# The kind for the new entity
 	kind = 'Talk'
 	# The name/ID for the new entity
-	time = datetime.fromtimestamp(timestamp//1000)
+	time = datetime.fromtimestamp(timestamp)
 	time += timedelta(hours=9) # timezoneをJSTに調整
 	name = str(time)
 	# The Cloud Datastore key for the new entity
