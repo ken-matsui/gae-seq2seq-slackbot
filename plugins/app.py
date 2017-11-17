@@ -46,7 +46,7 @@ def default_func(message):
 	response = decoder(query)
 	message.reply(response)
 	username = message.channel._client.users[message.body['user']][u'name']
-	store_data(int(message.body['ts']), username, query, response)
+	store_data(int(float(message.body['ts'])), username, query, response)
 
 def store_data(timestamp, user, query, response):
 	# The kind for the new entity
