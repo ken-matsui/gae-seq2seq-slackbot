@@ -1,4 +1,4 @@
-# python_appengine-slackbot
+# gae_slackbot
 
 ```
 pip install flask
@@ -30,3 +30,4 @@ manual_scaling:
 ```
 
 standard環境では，app.yamlで，library sslが必要だったが，flexible環境では不要
+
